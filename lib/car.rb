@@ -12,4 +12,12 @@ class Car
     @speed += speed_change
   end
 
+  def brake(speed_change)
+    if @speed - speed_change < 0
+      @speed = 0
+    else
+      @speed -= speed_change
+    end
+  end
+
 end

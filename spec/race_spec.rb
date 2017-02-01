@@ -2,7 +2,9 @@ require 'spec_helper'
 
 RSpec.describe Race do
   describe '::new' do
-    it 'instantiates two cars'
+    it 'instantiates two cars' do
+      expect(race.cars.length).to eq 2
+    end
     it 'accelerates the cars to random speeds'
   end
   describe '#winner' do
